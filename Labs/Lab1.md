@@ -78,6 +78,10 @@ You’ll simulate professional workflows, including branching, code reviews, mer
     - Use UV and create a pyproject.toml file which will be used to create a virtual environment.
     - Ensure xgboost and pandas verion is pinned to the latest semver.
 
+    ```
+    uv init .
+    ```
+
     Push the pyproject.toml, and uv.lock file to the remote repository.
 
 6. **Create a main.py** (Repo Owner):
