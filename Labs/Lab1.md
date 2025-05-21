@@ -80,6 +80,7 @@ You’ll simulate professional workflows, including branching, code reviews, mer
 
     ```
     uv init .
+    uv sync
     ```
 
     Push the pyproject.toml, and uv.lock file to the remote repository.
