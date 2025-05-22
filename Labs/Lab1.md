@@ -148,15 +148,15 @@ Person A puts up a PR.
 Others review it. 
 Once approvals are acquired, it is merged in main using the UI on github.
 
-**NOTE**: Do not pull the most recent changes from main or master branch. I recognize this isn't best practices. This lab's intention is to see how you can handle a situation where your local main is out of sync with the remote main, and therefore your branch. This futher means the PR that each person (B,C) has is branched off of a main that is stale. This is common, and requires your PR to be rebased or merged with a local main which is back in sync. Follow the steps below to manager this scenario.
+**NOTE**: Do not pull the most recent changes from main or master branch. I recognize this isn't best practices. This lab's intention is to see how you can handle a situation where your local main is out of sync with the remote main, and therefore your branch. This futher means the PR that each person (B,C) has is branched off of a main that is stale. This is common, and requires your PR to be merged with a local main which is back in sync. Follow the steps below to manager this scenario.
 
 Person B's PR is now out of date. (This is expected behaviour)
 
-Person B must rebase their local branch by:
+Person B must merge their local branch by:
 - Check out to main branch
 - Pull latest changes from main origin
 - Checkout back to their feature branch
-- Merge or rebase their feature branch with main local. 
+- Merge their feature branch with main local. 
 - Push changes to feature branch origin.
 - Create a PR to merge their feature branch to main. Following the steps from Person A above.
 
