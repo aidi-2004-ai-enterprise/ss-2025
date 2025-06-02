@@ -189,8 +189,7 @@ In your main branch:
 - Configure GitHub Actions for automated testing
 - See how CI prevents broken code from reaching main branch
 
-## Troubleshooting Tips
-- If tests fail, check the dataset URL is accessible
-- Ensure all dependencies are in `pyproject.toml`
-- Check indentation in YAML files (use spaces, not tabs)
-- Review GitHub Actions logs for detailed error messages
+## Common Issues
+- **Missing dependencies**: Ensure `uv add pandas pytest` was run
+- **Test discovery**: If tests are in `tests/` folder, use `pytest` not `pytest test_main.py`
+- **Local testing**: Always test locally first: `uv run python main.py && uv run pytest`
