@@ -8,11 +8,11 @@
 
 **Weight**: 10% of final grade
 
-**Due**: 1 week from assignment datex
+**Due**: 1 week from assignment date.
 
 **Submission**:
 - Slide deck as PDF via LMS
-- 1-page analysis document (comparison table or ecosystem overview)
+- (mp4 file) Screen recording presenting your slidedeck with face webcam and audio enabled. (Have all three enabled, facecam, audio and screenrecord. And present your powerpoint slidedeck.)
 - Demo evidence (screenshots or code snippets) in presentation appendix
 
 ## Core Philosophy
@@ -116,20 +116,8 @@ Choose **one domain** and analyze how **two complementary tools** work together 
 - 3–4 credible sources in APA format.
 
 ### Appendix: Demo
-- **Task A**: Screenshots or code of a “hello world” demo (e.g., dbt model, Jenkins pipeline).
-- **Task B**: Screenshots or code of one tool’s role (e.g., Airflow DAG; optional: both tools).
-
----
-
-## Analysis Document
-
-- **Task A: Comparison Table** (1 page):
-  - Columns: Tool 1, Tool 2.
-  - Rows: Technical approach, pricing, use cases, marketing claim vs. reality.
-- **Task B: Ecosystem Overview** (1 page):
-  - Simple diagram of tool relationships.
-  - Brief description of workflow and integration challenges.
-  - One marketing claim vs. reality.
+- **Task A**: A “hello world” demo (e.g., dbt model, Jenkins pipeline).
+- **Task B**: One tool’s role (e.g., Airflow DAG; optional: both tools).
 
 ---
 
