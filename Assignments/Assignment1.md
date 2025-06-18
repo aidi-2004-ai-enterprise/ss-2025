@@ -13,7 +13,7 @@
 **Submission**:
 - Slide deck as PDF via LMS
 - (mp4 file) Screen recording presenting your slidedeck with face webcam and audio enabled. (Have all three enabled, facecam, audio and screenrecord. And present your powerpoint slidedeck.)
-- Demo evidence (screenshots or code snippets) in presentation appendix
+- Demo evidence. Show me how the tool works during your demo :) 
 
 ## Core Philosophy
 
