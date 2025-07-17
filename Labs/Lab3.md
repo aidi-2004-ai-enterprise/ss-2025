@@ -1,5 +1,7 @@
 # Lab 3: Penguins Classification with XGBoost and FastAPI
 
+
+
 ## Overview
 This individual assignment focuses on building a machine learning pipeline using the Seaborn penguins dataset, training an XGBoost model, and deploying it via a FastAPI application. You will preprocess the data, train and evaluate a model, and create a prediction endpoint with proper input validation. The assignment emphasizes robust error handling, logging, and professional coding practices.
 
@@ -13,6 +15,11 @@ This individual assignment focuses on building a machine learning pipeline using
 
 ## Submission Requirements
 - **Repository**: Create an individual repository in the `aidi-2004-ai-enterprise` GitHub organization.
+    Name: `lab3_<first_name>_<last_name>`
+- Readme should contain a screenrecording (no facecame or audio or any explaination required)
+    - The video should have a few examples of you sending a request and it failing gracefully
+    - Instance of a few successful requests
+    - (This requires you to upload the .mp4 file to your repo, pls keep the file size small) 
 - **Package Management**: Use `uv` to manage Python dependencies.
 - **Directory Structure**:
   ```
@@ -75,7 +82,7 @@ The `main.py` in the `bipin-june11` branch has the following issues to fix:
   - Issue: The current implementation uses `pd.get_dummies(X_input, columns=["sex", "island"])` without ensuring consistency with training, allowing invalid values (e.g., `island="dummy_value"`) to be encoded.
   - Solution: Use the provided Pydantic `Enum` classes (`Island`, `Sex`) to restrict inputs to valid values and ensure consistent encoding (e.g., save and reuse the encoder from training).
 - **Input Validation**: Ensure the application fails gracefully (e.g., returns HTTP 400) with clear error messages for invalid `sex` or `island` values not present in the training dataset.
-- **Logging**: Add logging statements in `main.py` using Python’s `logging` module to track model loading, input validation, and prediction outcomes.
+- **Logging**: Add logging statements in `main.py` using Python’s `logging` module to track model loading, input validation, and prediction outcomes. **NOTE:** Logging is not a print statement. It should look something like:  https://docs.python.org/3/howto/logging.html#logging-to-a-file 
 
 ## Rubric
 **Total Points: 100**
@@ -83,10 +90,10 @@ The `main.py` in the `bipin-june11` branch has the following issues to fix:
 | **Category**                     | **Description**                                                                 | **Points** | **Criteria for Full Points**                                                                                          |
 |----------------------------------|--------------------------------------------------------------------------------|------------|---------------------------------------------------------------------------------------------------------------------|
 | **Repository Setup**             | Create a repository in the `aidi-2004-ai-enterprise` organization with `uv`.     | **10**     | - Repository follows naming convention.<br>- `pyproject.toml` or `requirements.txt` configured with `uv`.<br>- `README.md` includes clear setup and run instructions. |
-| **train.py Implementation**      | Load, preprocess, train, evaluate, and save an XGBoost model.                   | **40**     | - Loads penguins dataset correctly (5 pts).<br>- Applies one-hot encoding for `sex` and `island`, label encoding for `species` (10 pts).<br>- Splits data into stratified train/test sets (e.g., 80/20) (5 pts).<br>- Uses XGBoost with parameters to avoid overfitting (e.g., `max_depth=3`, `n_estimators=100`) (10 pts).<br>- Reports accuracy and F1-score for train and test sets (5 pts).<br>- Saves model to `app/data/model.json` (5 pts). |
+| **train.py Implementation**      | Load, preprocess, train, evaluate, and save an XGBoost model.                   | **40**     | - Loads penguins dataset correctly (5 pts).<br>- Applies one-hot encoding for `sex` and `island`, label encoding for `species` (10 pts).<br>- Splits data into stratified train/test sets (e.g., 80/20) (5 pts).<br>- Uses XGBoost with parameters to avoid overfitting (e.g., `max_depth=3`, `n_estimators=100`) (10 pts).<br>- Reports performance metrics such as F1-score for train and test sets (5 pts).<br>- Saves model to `app/data/model.json` (5 pts). |
 | **app/main.py Implementation**   | Create a FastAPI app with a `/predict` endpoint and Pydantic validation.         | **30**     | - Defines `PenguinFeatures` with correct fields and `Enum` for `sex` and `island` (10 pts).<br>- Validates `sex` and `island` to training dataset values (10 pts).<br>- Loads model from `app/data/model.json` and predicts with consistent one-hot encoding (10 pts). |
 | **Error Handling**               | Handle invalid categorical inputs gracefully.                                   | **10**     | - Returns HTTP 400 with clear error messages for invalid `sex` or `island` values.<br>- Validates inputs before prediction. |
-| **Logging**                      | Include logging in `main.py` for key operations.                                | **10**     | - Uses `logging` module with `INFO` for model loading/predictions, `ERROR` for invalid inputs.<br>- Logs are clear and output to console. |
+| **Logging**                      | Include logging in `main.py` for key operations.                                | **10**     | - Uses `logging` module with `INFO` for model loading/predictions, `DEBUG` for invalid inputs.<br>- Logs are clear and output to console. |
 
 ### Deductions
 - **-5 points**: Missing or unclear `README.md`.
