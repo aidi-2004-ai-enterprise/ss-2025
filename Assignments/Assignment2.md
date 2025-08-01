@@ -44,9 +44,11 @@ This simulates a real-world ML deployment workflow.
 **Estimated Total Time**: 10-15 hours over one week
 
 **Suggested Timeline**:
-- **Days 1-2**: Tasks 1-2 (Testing and containerization)
-- **Days 3-4**: Tasks 3-4 (Service account setup and CI pipeline)
-- **Day 7**: Task 7 (Load testing) and documentation
+- **Days 1-2**: Task 1 (Testing) and Task 2 (Containerization)
+- **Day 3**: Task 3 (Service account setup and Artifact Registry)
+- **Day 4**: Task 5 (Manual Cloud Deployment)
+- **Day 5**: Task 7 (Load testing)
+- **Day 6-7**: Documentation, review, and final submission
 
 Track milestones to avoid a last-minute rush.
 
