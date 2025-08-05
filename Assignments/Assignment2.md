@@ -46,8 +46,8 @@ This simulates a real-world ML deployment workflow.
 **Suggested Timeline**:
 - **Days 1-2**: Task 1 (Testing) and Task 2 (Containerization)
 - **Day 3**: Task 3 (Service account setup and Artifact Registry)
-- **Day 4**: Task 5 (Manual Cloud Deployment)
-- **Day 5**: Task 7 (Load testing)
+- **Day 4**: Task 4 (Manual Cloud Deployment)
+- **Day 5**: Task 5 (Load testing)
 - **Day 6-7**: Documentation, review, and final submission
 
 Track milestones to avoid a last-minute rush.
@@ -226,7 +226,7 @@ def test_predict_endpoint_invalid_input():
 
 ---
 
-### Task 5: Manual Cloud Deployment (15 points | 1-2 hours)
+### Task 4: Manual Cloud Deployment (15 points | 1-2 hours)
 **Goal**: Deploy your container to Cloud Run manually to understand the process.
 
 **Requirements**:
@@ -275,7 +275,7 @@ def test_predict_endpoint_invalid_input():
 
 ---
 
-### Task 7: Production Load Testing & Analysis (10 points | 1 hour)
+### Task 5: Production Load Testing & Analysis (10 points | 1 hour)
 **Goal**: Validate Cloud Run deployment under production-scale traffic.
 
 **Requirements**:
@@ -342,17 +342,6 @@ Include:
 
 ---
 
-## 🏆 Grading Rubric (100 points)
-- Task 1: 15 points
-- Task 2: 20 points
-- Task 3: 10 points
-- Task 4: 20 points
-- Task 5: 15 points
-- Task 6: 20 points
-- Task 7: 10 points
-
----
-
 ## 🔧 Troubleshooting Guide
 **Cloud Run Issues**:
 - See troubleshooting guide: https://cloud.google.com/run/docs/troubleshooting
@@ -394,3 +383,4 @@ Include:
 - What would you do if deployment fails in production?
 
 - What happens if your container uses too much memory?
+
